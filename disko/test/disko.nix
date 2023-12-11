@@ -74,9 +74,9 @@
         datasets = {
           reservation = {
             type = "zfs_fs";
+            mountpoint = "none";
             options = {
               canmount = "off";
-              mountpoint = "none";
               refreservation = "35G";
               primarycache = "none";
               secondarycache = "none";
@@ -86,9 +86,8 @@
           nix = {
             type = "zfs_fs";
             mountOptions = [ "noatime" "nodiratime" ];
+            mountpoint = "/nix";
             options = {
-              canmount = "on";
-              mountpoint = "/nix";
               relatime = "off";
               atime = "off";
               secondarycache = "none";
@@ -98,10 +97,7 @@
 
           persist = {
             type = "zfs_fs";
-            options = {
-              canmount = "on";
-              mountpoint = "/persist";
-            };
+            mountpoint = "/persist";
           };
         };
       };
