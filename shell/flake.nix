@@ -11,7 +11,7 @@
       in {
         devShells.default = pkgs.mkShell {
           NIX_CONFIG =
-            "experimental-features = nix-command flakes repl-flake";
+            "extra-experimental-features = nix-command flakes repl-flake";
           nativeBuildInputs = with pkgs; [
             nix
             home-manager
