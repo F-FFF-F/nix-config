@@ -10,10 +10,12 @@
             boot = {
               size = "1M";
               type = "EF02";
+              name = "bioscompat";
             };
             ESP = {
               size = "512M";
               type = "EF00";
+              name = "efi";
               content = {
                 type = "filesystem";
                 format = "vfat";
@@ -23,6 +25,7 @@
             nixos = {
               size = "100%";
               type = "8300";
+              name = "cryptroot";
               content = {
                 type = "luks";
                 extraOpenArgs = [
