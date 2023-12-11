@@ -33,6 +33,7 @@
                   "--perf-no_write_workqueue"
                   "--perf-no_read_workqueue"
                 ];
+                name = "nixos";
                 settings = { allowDiscards = true; };
                 content = {
                   type = "zfs";
