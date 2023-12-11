@@ -102,7 +102,7 @@
             mountpoint = "/persist";
             options = {
               mountpoint = "/persist";
-            }
+            };
           };
         };
       };
