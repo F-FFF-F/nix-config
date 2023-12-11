@@ -80,6 +80,7 @@
               refreservation = "35G";
               primarycache = "none";
               secondarycache = "none";
+              mountpoint = "none";
             };
           };
 
@@ -92,12 +93,16 @@
               atime = "off";
               secondarycache = "none";
               "com.sun:auto-snapshot" = "false";
+              mountpoint = "/nix";
             };
           };
 
           persist = {
             type = "zfs_fs";
             mountpoint = "/persist";
+            options = {
+              mountpoint = "/persist";
+            }
           };
         };
       };
