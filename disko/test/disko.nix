@@ -74,7 +74,7 @@
         datasets = {
           reservation = {
             type = "zfs_fs";
-            mountpoint = "none";
+            mountpoint = null;
             options = {
               canmount = "off";
               refreservation = "35G";
