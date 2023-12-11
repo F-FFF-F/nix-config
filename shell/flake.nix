@@ -9,9 +9,9 @@
         overlays = [ ];
         pkgs = import nixpkgs { inherit system overlays; };
       in {
-        NIX_CONFIG =
-          "extra-experimental-features = nix-command flakes repl-flake";
         devShells.default = pkgs.mkShell {
+          NIX_CONFIG =
+            "extra-experimental-features = nix-command flakes repl-flake";
           nativeBuildInputs = with pkgs; [
             nix
             home-manager
