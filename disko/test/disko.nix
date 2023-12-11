@@ -59,7 +59,6 @@
           normalization = "formD";
           relatime = "on";
           xattr = "sa";
-          dnodesize = "auto";
           "com.sun:auto-snapshot" = "false";
           canmount = "on";
         };
