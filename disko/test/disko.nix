@@ -45,11 +45,7 @@
         };
       };
     };
-    nodev = {
-      "/" = {
-        fsType = "tmpfs";
-      };
-    };
+    nodev = { "/" = { fsType = "tmpfs"; }; };
     zpool = {
       zroot = {
         type = "zpool";
