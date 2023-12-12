@@ -26,8 +26,6 @@
     git.enable = true;
   };
 
-  programs.fuse.userAllowOther = true;
-
   home = {
     username = lib.mkDefault "f";
     homeDirectory = lib.mkDefault "/home/${config.home.username}";
