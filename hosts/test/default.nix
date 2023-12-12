@@ -11,4 +11,5 @@
   ];
 
   networking.hostName = "test";
+  networking.hostId = lib.mkDefault "8425e349";
 }
