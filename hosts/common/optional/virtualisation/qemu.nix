@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  virtualization = {
+  virtualisation = {
     kvmgt = {
      enable = true; 
     };
@@ -12,7 +12,7 @@
         ovmf = {
           enable = true;
           packages = [
-            OVMFFull
+            pkgs.OVMFFull
           ];
         };
       };

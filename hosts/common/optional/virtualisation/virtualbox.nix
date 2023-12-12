@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  virtualization = {
+  virtualisation = {
     virtualbox = {
       host = {
         enable = true;

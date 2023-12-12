@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  virtualization = {
+  virtualisation = {
     lxc = {
       enable = true;
       lxcfs = { enable = true; };
