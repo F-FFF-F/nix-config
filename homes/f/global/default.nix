@@ -1,9 +1,8 @@
 { inputs, lib, pkgs, config, outputs, ... }:
 
 {
-  imports = [
-    inputs.impermanence.nixosModules.home-manager.impermanence
-  ] ++ (builtins.attrValues outputs.homeManagerModules);
+  imports = [ inputs.impermanence.nixosModules.home-manager.impermanence ]
+    ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
@@ -13,6 +12,8 @@
       allowUnfreePredicate = (_: true);
     };
   };
+
+  systemd.user.startServices = "sd-switch";
 
   nix = {
     package = lib.mkDefault pkgs.nix;
@@ -26,9 +27,7 @@
     git = {
       enable = true;
       package = pkgs.gitFull;
-      lfs = {
-        enable = true;
-      };
+      lfs = { enable = true; };
     };
   };
 
