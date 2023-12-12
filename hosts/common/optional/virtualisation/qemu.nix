@@ -17,5 +17,11 @@
         };
       };
     };
+    tpm = {
+      enable = true;
+    };
+    spiceUSBRedirection = {
+      enable = true;
+    };
   };
 }
