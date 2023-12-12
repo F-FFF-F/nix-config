@@ -1,7 +1,7 @@
 { lib, inputs, outputs, pkgs, ... }: {
   imports = [
-    "${inputs.nixpkgs}/modules/profiles/all-hardware.nix"
-    "${inputs.nixpkgs}/modules/profiles/qemu-guest.nix"
+    "${inputs.nixpkgs}/nixos/modules/profiles/all-hardware.nix"
+    "${inputs.nixpkgs}/nixos/modules/profiles/qemu-guest.nix"
     ../common/fstab/zfs.nix
   ];
   boot = {
