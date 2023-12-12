@@ -1,6 +1,6 @@
 {
   networking = {
-    useDHCP = true;
+    useDHCP = false;
     networkmanager = { enable = true; };
   };
 }
