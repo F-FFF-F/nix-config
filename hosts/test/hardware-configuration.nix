@@ -22,6 +22,11 @@
     };
   };
 
+  opengl = {
+      driSupport = true;
+      driSupport32Bit = true;
+  };
+
   hardware.enableAllFirmware = true;
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   system.stateVersion = "23.11";
