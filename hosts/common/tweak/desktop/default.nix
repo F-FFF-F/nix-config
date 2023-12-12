@@ -3,7 +3,7 @@
     ./dirty-bytes.nix
     ./disable-icmp.nix
     ./disable-mitigations.nix
-    ./disable-watchdog
+    ./disable-watchdog.nix
     ./ecn.nix
     ./good-response-time.nix
     ./iomem.nix

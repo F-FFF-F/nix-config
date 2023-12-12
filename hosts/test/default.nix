@@ -5,6 +5,9 @@
     ../common/global
     ../common/users/f
 
+    ../common/tweak/common
+    ../common/tweak/desktop
+
     ../common/optional/sound.nix
     ../common/optional/network-manager.nix
     ../common/optional/zram.nix
