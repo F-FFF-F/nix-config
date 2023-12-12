@@ -1,4 +1,4 @@
-{ lib, ... }: {
+{ lib, inputs, outputs, pkgs, ... }: {
   imports = [
     "${inputs.nixpkgs}/modules/profiles/all-hardware.nix"
     "${inputs.nixpkgs}/modules/profiles/qemu-guest.nix"
