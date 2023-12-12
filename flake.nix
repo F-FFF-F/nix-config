@@ -44,7 +44,7 @@
 
       homeConfigurations = {
         "f@test" = lib.homeManagerConfiguration {
-          modules = [ ./home/misterio/atlas.nix ];
+          modules = [ ./home/f/test.nix ];
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
