@@ -23,7 +23,13 @@
 
   programs = {
     home-manager.enable = true;
-    git.enable = true;
+    git = {
+      enable = true;
+      package = pkgs.gitFull;
+      lfs = {
+        enable = true;
+      };
+    };
   };
 
   home = {
