@@ -11,7 +11,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, modulesPath ... }@inputs:
     let
       inherit (self) outputs;
       lib = nixpkgs.lib // home-manager.lib;
@@ -38,7 +38,7 @@
       nixosConfigurations = {
         test = lib.nixosSystem {
           modules = [ ./hosts/test ];
-          specialArgs = { inherit inputs outputs; };
+          specialArgs = { inherit inputs outputs modulesPath; };
         };
       };
 
