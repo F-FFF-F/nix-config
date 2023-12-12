@@ -1,8 +1,7 @@
-{ modulesPath, ... }:
 {
   imports = [
-    (modulesPath + "/profiles/all-hardware.nix")
-    (modulesPath + "/profiles/qemu-guest.nix")
+    "${inputs.nixpkgs}/modules/profiles/all-hardware.nix"
+    "${inputs.nixpkgs}/modules/profiles/qemu-guest.nix"
     ../common/fstab/zfs.nix
   ];
   boot = {

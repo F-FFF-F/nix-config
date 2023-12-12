@@ -38,7 +38,7 @@
       nixosConfigurations = {
         test = lib.nixosSystem {
           modules = [ ./hosts/test ];
-          specialArgs = { inherit inputs outputs modulesPath; };
+          specialArgs = { inherit inputs outputs; };
         };
       };
 
