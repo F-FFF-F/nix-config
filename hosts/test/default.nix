@@ -1,6 +1,6 @@
 {
   imports = [
-    ./hardware-configuration
+    ./hardware-configuration.nix
 
     ../common/global
     ../common/users/f
