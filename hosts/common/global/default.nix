@@ -13,6 +13,9 @@
       allowUnfree = true;
       joypixels.acceptLicense = true;
       allowUnfreePredicate = (_: true);
+      input-fonts.acceptLicense = true;
+      nvidia.acceptLicense = true;
+      oraclejdk.accept_license = true;
     };
   };
 }
