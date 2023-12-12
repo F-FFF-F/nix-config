@@ -4,7 +4,7 @@ let
     builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in {
   users.mutableUsers = false;
-  users.users.misterio = {
+  users.users.f = {
     isNormalUser = true;
     extraGroups = [ "wheel" "video" "audio" ] ++ ifTheyExist [
       "minecraft"
