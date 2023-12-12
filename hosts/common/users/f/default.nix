@@ -1,11 +1,13 @@
-{ pkgs, config, ... }:
+{ pkgs, inputs, config, ... }:
 let
   ifTheyExist = groups:
     builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in {
+  imports = [ inputs.home-manager.nixosModules.home-manager ];
   users.mutableUsers = false;
   users.users.f = {
     isNormalUser = true;
+
     extraGroups = [ "wheel" "video" "audio" ] ++ ifTheyExist [
       "minecraft"
       "network"
@@ -41,6 +43,11 @@ in {
 
   programs.fuse.userAllowOther = true;
 
-  home-manager.users.f =
-    import ../../../../homes/f/${config.networking.hostName}.nix;
+  home-manager = {
+    users = {
+      f = import ../../../../homes/f/${config.networking.hostName}.nix;
+    };
+    useGlobalPkgs = true;
+    useUserPackages = true;
+  };
 }

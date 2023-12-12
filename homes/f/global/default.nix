@@ -4,15 +4,6 @@
   imports = [ inputs.impermanence.nixosModules.home-manager.impermanence ]
     ++ (builtins.attrValues outputs.homeManagerModules);
 
-  nixpkgs = {
-    overlays = builtins.attrValues outputs.overlays;
-    config = {
-      allowUnfree = true;
-      joypixels.acceptLicense = true;
-      allowUnfreePredicate = (_: true);
-    };
-  };
-
   systemd.user.startServices = "sd-switch";
 
   nix = {
