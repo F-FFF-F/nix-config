@@ -27,7 +27,7 @@ in {
       "floppy"
     ];
 
-    initialHashedPassword = "test";
+    initialPassword = "test";
     packages = [ pkgs.home-manager ];
   };
 
