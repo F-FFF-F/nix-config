@@ -9,6 +9,8 @@
     ../common/optional/network-manager.nix
     ../common/optional/zram.nix
     ../common/optional/all-fs.nix
+    ../common/optional/virtualization
+    ../common/optional/virtualbox.nix
   ];
 
   networking.hostName = "test";
