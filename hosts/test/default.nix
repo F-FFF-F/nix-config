@@ -1,4 +1,4 @@
-{ lib, ... }: {
+{ lib, pkgs, ... }: {
   imports = [
     ./hardware-configuration.nix
 
@@ -14,6 +14,8 @@
     ../common/optional/all-fs.nix
     ../common/optional/virtualisation
   ];
+
+  boot.kernelPackages = pkgs.linuxPackages_cachyos;
 
   networking.hostName = "test";
   networking.hostId = lib.mkDefault "8425e349";

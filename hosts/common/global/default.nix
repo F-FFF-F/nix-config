@@ -1,6 +1,7 @@
 { inputs, outputs, ... }: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
+    inputs.chaotic.nixosModules.default
 
     ./locale.nix
   ] ++ (builtins.attrValues outputs.nixosModules);

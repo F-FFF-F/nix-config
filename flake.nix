@@ -1,6 +1,14 @@
 {
   description = "NixOS";
 
+  nixConfig = {
+    extra-substituters = [ "https://nyx.chaotic.cx/" ];
+    extra-trusted-public-keys = [
+      "nyx.chaotic.cx-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8="
+      "chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8="
+    ];
+  };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hardware.url = "github:nixos/nixos-hardware";
@@ -9,6 +17,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    chaotic = { url = "github:chaotic-cx/nyx/nyxpkgs-unstable"; };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
