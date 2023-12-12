@@ -21,6 +21,9 @@ in {
       "deluge"
       "networkmanager"
       "adbusers"
+      "dialout"
+      "lxd"
+      "vboxusers"
 
       "cdrom"
       "tape"
