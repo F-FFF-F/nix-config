@@ -6,7 +6,6 @@
     ../common/users/f
 
     ../common/optional/sound.nix
-    ../common/optional/all-binfmt.nix
     ../common/optional/network-manager.nix
     ../common/optional/zram.nix
     ../common/optional/all-fs.nix
