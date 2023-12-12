@@ -9,6 +9,7 @@
     ../common/optional/all-binfmt.nix
     ../common/optional/network-manager.nix
     ../common/optional/zram.nix
+    ../common/optional/all-fs.nix
   ];
 
   networking.hostName = "test";
