@@ -1,15 +1,12 @@
 { pkgs, config, ... }:
-let ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
-in
-{
+let
+  ifTheyExist = groups:
+    builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
+in {
   users.mutableUsers = false;
   users.users.misterio = {
     isNormalUser = true;
-    extraGroups = [
-      "wheel"
-      "video"
-      "audio"
-    ] ++ ifTheyExist [
+    extraGroups = [ "wheel" "video" "audio" ] ++ ifTheyExist [
       "minecraft"
       "network"
       "wireshark"
@@ -41,5 +38,8 @@ in
     };
   };
 
-  home-manager.users.misterio = import ../../../../homes/f/${config.networking.hostName}.nix;
+  programs.fuse.userAllowOther = true;
+
+  home-manager.users.f =
+    import ../../../../homes/f/${config.networking.hostName}.nix;
 }
