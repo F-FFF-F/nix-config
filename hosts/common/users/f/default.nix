@@ -18,6 +18,7 @@ in {
       "libvirtd"
       "deluge"
       "networkmanager"
+      "adbusers"
 
       "cdrom"
       "tape"
