@@ -30,6 +30,7 @@ in {
       "input"
       "games"
       "floppy"
+      "render"
     ];
 
     initialPassword = "test";
