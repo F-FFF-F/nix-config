@@ -10,9 +10,6 @@
         refuse_any = false;
         fastest_addr = true;
         upstream_dns = [
-          "https://dns.cloudflare.com/dns-query"
-          "https://dns.google/dns-query"
-          "https://unfiltered.adguard-dns.com/dns-query"
         ] ++ [
           "193.58.251.251" # SkyDNS
           "77.88.8.8" # YandexDNS
