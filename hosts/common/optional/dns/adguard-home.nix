@@ -2,7 +2,7 @@
   services.adguardhome = {
     enable = true;
     extraArgs = [ "--no-etc-hosts" ];
-    mutableSettings = true;
+    mutableSettings = false;
     allowDHCP = true;
     settings = {
       dns = {
@@ -16,7 +16,6 @@
         use_http3_upstreams = true;
         upstream_dns = [
           "https://77.88.8.8:443" # YandexDNS
-          "193.58.251.251" # SkyDNS
           "https://dns.comss.one/dns-query"
         ] ++ [
           "https://dns.cloudflare.com/dns-query"
@@ -43,6 +42,129 @@
         ];
         bootstrap_dns = [ "77.88.8.8" ];
         resolve_clients = false;
+        filters = [
+          {
+            name = "oisd big";
+            url = "https://big.oisd.nl";
+            enabled = true;
+            id = 1;
+          }
+          {
+            name = "EasyList RU";
+            url =
+              "https://raw.githubusercontent.com/easylist/ruadlist/master/advblock/adservers.txt";
+            enabled = true;
+            id = 2;
+          }
+          {
+            name = "AdGuard Base filter cryptominers";
+            url =
+              "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/cryptominers.txt";
+            enabled = true;
+            id = 3;
+          }
+          {
+            name = "AdGuard Base filter";
+            url =
+              "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers.txt";
+            enabled = true;
+            id = 4;
+          }
+          {
+            name = "AdGuard Base filter — first-party servers";
+            url =
+              "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers_firstparty.txt";
+            enabled = true;
+            id = 5;
+          }
+          {
+            name = "AdGuard Base filter — foreign servers";
+            url =
+              "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/foreign.txt";
+            enabled = true;
+            id = 6;
+          }
+          {
+            name = "AdGuard common Cyrillic filters ad servers";
+            url =
+              "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/CyrillicFilters/common-sections/adservers.txt";
+            enabled = true;
+            id = 7;
+          }
+          {
+            name =
+              "AdGuard common Cyrillic filters ad servers — first-party servers";
+            url =
+              "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/CyrillicFilters/common-sections/adservers_firstparty.txt";
+            enabled = true;
+            id = 8;
+          }
+          {
+            name = "AdGuard Ukrainian filter — first-party servers";
+            url =
+              "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/CyrillicFilters/UkrainianFilter/sections/adservers_firstparty.txt";
+            enabled = true;
+            id = 9;
+          }
+          {
+            name = "AdGuard Russian filter — first-party servers";
+            url =
+              "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/CyrillicFilters/RussianFilter/sections/adservers_firstparty.txt";
+            enabled = true;
+            id = 10;
+          }
+          {
+            name = "AdGuard Belarusian language ad servers";
+            url =
+              "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/CyrillicFilters/Belarusian/sections/filter.txt";
+            enabled = true;
+            id = 11;
+          }
+        ];
+        whitelist_filters = [
+          {
+            name = "1hosts exclusions";
+            enabled = true;
+            url =
+              "https://raw.githubusercontent.com/badmojr/1Hosts/master/submit_here/exclude_for_all.txt";
+            id = 1;
+          }
+          {
+            name = "RU Adlist whitelist";
+            enabled = true;
+            url =
+              "https://raw.githubusercontent.com/easylist/ruadlist/master/advblock/whitelist.txt";
+            id = 2;
+          }
+          {
+            name = "AdGuard exclusions";
+            enabled = true;
+            url =
+              "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/master/Filters/exclusions.txt";
+            id = 3;
+          }
+          {
+            name = "AdGuard exceptons";
+            enabled = true;
+            url =
+              "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/master/Filters/exceptions.txt";
+            id = 4;
+          }
+          {
+            name = "additional_hosts_duckduckgo";
+            enabled = true;
+            url =
+              "https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/whitelist/duckduckgo.txt";
+            id = 5;
+          }
+          {
+            name = "anudeep_whitelist";
+            enabled = true;
+            url =
+              "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt";
+            id = 6;
+          }
+        ];
       };
     };
   };
