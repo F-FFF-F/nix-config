@@ -6,6 +6,11 @@
     allowDHCP = true;
     settings = {
       dns = {
+        bind_hosts = [ "127.0.0.1" "::1" ];
+        bind_port = 53;
+        anonymize_client_ip = true;
+        ratelimit = 0;
+        refuse_any = false;
         edns_client_subnet.enabled = true;
         fastest_addr = true;
         use_http3_upstreams = true;
