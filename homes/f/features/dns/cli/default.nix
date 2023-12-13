@@ -5,6 +5,16 @@
       bind
       knot-dns
       knot-resolver
-      unbound-full  
+      unbound-full
+      adguardhome
+      coredns
+      stubby
+      dnscrypt-proxy
+      dnscrypt-wrapper
+      dnsmasq
+      dnsproxy
+      pdnsd
+      routedns
+      smartdns
     ];
 }
