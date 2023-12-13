@@ -30,6 +30,8 @@
           "195.10.195.195" # OpenNIC
         ];
         cache_optimistic = true;
+        cache_size = 536870912; # 512 MB
+        cache_ttl_min = 1800;
         cache_ttl_max = 3600;
         enable_dnssec = true;
         aaaa_disabled = true;
