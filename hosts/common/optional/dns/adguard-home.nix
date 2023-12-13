@@ -33,7 +33,6 @@
           "https://dns.comss.one/dns-query"
         ];
         bootstrap_dns = [ "1.1.1.1" ];
-        resolve_clients = true;
       };
     };
   };
