@@ -10,27 +10,27 @@
         fastest_addr = true;
         use_http3_upstreams = true;
         upstream_dns = [
-          "h3://dns.cloudflare.com/dns-query"
-          "h3://dns.google/dns-query"
-          "h3://unfiltered.adguard-dns.com/dns-query"
+          "https://dns.cloudflare.com/dns-query"
+          "https://dns.google/dns-query"
+          "https://unfiltered.adguard-dns.com/dns-query"
         ] ++ [
           "193.58.251.251" # SkyDNS
-          "h3://77.88.8.8:443" # YandexDNS
+          "77.88.8.8" # YandexDNS
         ];
         cache_optimistic = true;
         cache_size = 536870912; # 512 MB
         cache_ttl_min = 1800;
         cache_ttl_max = 3600;
         fallback_dns = [
-          "h3://dns11.quad9.net/dns-query"
-          "h3://doh.libredns.gr/dns-query"
-          "h3://doh.sandbox.opendns.com/dns-query"
-          "h3://dns.alidns.com/dns-query"
+          "https://dns11.quad9.net/dns-query"
+          "https://doh.libredns.gr/dns-query"
+          "https://doh.sandbox.opendns.com/dns-query"
+          "https://dns.alidns.com/dns-query"
           "quic://unfiltered.dns.bebasid.com:853"
-          "h3://dns.bebasid.com/unfiltered"
+          "https://dns.bebasid.com/unfiltered"
           "quic://unfiltered.adguard-dns.com"
           "195.10.195.195" # OpenNIC
-          "h3://dns.comss.one/dns-query"
+          "https://dns.comss.one/dns-query"
         ];
         bootstrap_dns = [ "1.1.1.1" ];
         resolve_clients = true;
