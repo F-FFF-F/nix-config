@@ -2,7 +2,7 @@
   services.adguardhome = {
     enable = true;
     extraArgs = [ "--no-etc-hosts" ];
-    mutableSettings = true;
+    mutableSettings = false;
     allowDHCP = true;
     settings = {
       dns = {
@@ -11,9 +11,7 @@
         anonymize_client_ip = true;
         ratelimit = 0;
         refuse_any = false;
-        edns_client_subnet.enabled = true;
         fastest_addr = true;
-        use_http3_upstreams = true;
         upstream_dns = [
           "https://dns.cloudflare.com/dns-query"
           "https://dns.google/dns-query"
@@ -37,7 +35,7 @@
           "195.10.195.195" # OpenNIC
           "https://dns.comss.one/dns-query"
         ];
-        bootstrap_dns = [ "1.1.1.1" ];
+        bootstrap_dns = [ "8.8.8.8" ];
       };
     };
   };
