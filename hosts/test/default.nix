@@ -13,6 +13,7 @@
     ../common/optional/zram.nix
     ../common/optional/all-fs.nix
     ../common/optional/virtualisation
+    ../common/optional/ananicy.nix
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
