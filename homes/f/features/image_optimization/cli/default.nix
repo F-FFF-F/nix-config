@@ -19,8 +19,6 @@
     flaca
     trimage
 
-    mozjpeg
-    libjpeg_original
     libjxl
     imlib2Full
     libimagequant
