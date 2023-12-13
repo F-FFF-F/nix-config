@@ -11,7 +11,9 @@
         anonymize_client_ip = true;
         ratelimit = 0;
         refuse_any = false;
-        edns_client_subnet.enabled = true;
+        edns_client_subnet = {
+          enabled = true;
+        };
         fastest_addr = true;
         use_http3_upstreams = true;
         upstream_dns = [
