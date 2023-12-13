@@ -14,6 +14,7 @@
     ../common/optional/all-fs.nix
     ../common/optional/virtualisation
     ../common/optional/ananicy.nix
+    ../common/optional/dns/adguard-home.nix
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
