@@ -6,8 +6,6 @@
     allowDHCP = true;
     settings = {
       dns = {
-        bind_host = "127.0.0.1";
-        bind_port = "5565";
         edns_client_subnet.enabled = true;
         fastest_addr = true;
         use_http3_upstreams = true;
