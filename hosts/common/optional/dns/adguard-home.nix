@@ -1,14 +1,11 @@
 { config, pkgs, ... }: {
   services.adguardhome = {
     enable = true;
-    extraArgs = [ "--no-etc-hosts" ];
-    mutableSettings = false;
-    allowDHCP = true;
+    mutableSettings = true;
     settings = {
       dns = {
-        bind_hosts = [ "127.0.0.1" "::1" ];
+        bind_hosts = [ "127.0.0.1" ];
         bind_port = 53;
-        anonymize_client_ip = true;
         ratelimit = 0;
         refuse_any = false;
         fastest_addr = true;
