@@ -6,5 +6,6 @@
     ./features/desktop/common
     ./features/compression
     ./features/image_optimization
+    ./features/dns
   ];
 }
