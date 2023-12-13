@@ -19,7 +19,7 @@
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
-
+  networking.firewall.enable = false;
   networking.hostName = "test";
   networking.hostId = lib.mkDefault "8425e349";
 }
