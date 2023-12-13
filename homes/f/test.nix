@@ -8,5 +8,6 @@
     ./features/image_optimization
     ./features/dns
     ./features/net
+    ./features/secrets_management
   ];
 }
