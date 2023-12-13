@@ -42,6 +42,5 @@
     libzip
     zlib-ng
     zopfli
-    minizip-ng
   ];
 }
