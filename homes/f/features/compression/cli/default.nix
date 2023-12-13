@@ -42,5 +42,6 @@
     libzip
     zlib-ng
     zopfli
+    zarchive
   ];
 }
