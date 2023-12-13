@@ -27,7 +27,6 @@
     zstd
     p7zip
     rar
-    unrar
     tarlz
     unar
     zpaq
