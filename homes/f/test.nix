@@ -7,5 +7,6 @@
     ./features/compression
     ./features/image_optimization
     ./features/dns
+    ./features/net
   ];
 }
