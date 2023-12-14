@@ -31,6 +31,7 @@ in {
       "games"
       "floppy"
       "render"
+      "realtime"
     ];
 
     initialPassword = "test";
