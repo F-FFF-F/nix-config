@@ -4,5 +4,6 @@
       opera
       palemoon-bin
       microsoft-edge
+      google-chrome
     ];
 }
