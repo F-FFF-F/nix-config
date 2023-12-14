@@ -18,6 +18,7 @@
     ../common/optional/dns/use-adguard-home.nix
     ../common/optional/irqbalance.nix
     ../common/optional/auto-cpufreq.nix
+    ../common/optional/time
   ];
 
   # temporary
