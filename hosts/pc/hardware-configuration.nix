@@ -45,7 +45,7 @@
 
   hardware.cpu.intel.updateMicrocode = true;
   services.fstrim.enable = true;
-  services.zfstrim.enable = true;
+  services.zfs.trim.enable = true;
 
   hardware.enableAllFirmware = true;
   hardware.enableRedistributableFirmware = true;
