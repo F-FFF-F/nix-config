@@ -27,7 +27,7 @@
       ];
     in {
       enable = true;
-      enableNts = true;
+      enableNTS = true;
       servers = ntsServers;
       enableRTCTrimming = true;
       enableMemoryLocking = true;
