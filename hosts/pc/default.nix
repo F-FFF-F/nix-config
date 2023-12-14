@@ -20,6 +20,8 @@
     ../common/optional/auto-cpufreq.nix
     ../common/optional/thermald.nix
     ../common/optional/time
+    ../common/optional/oomd.nix
+    ../common/optional/faster-shutdown.nix
   ];
 
   # temporary
