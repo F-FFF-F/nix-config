@@ -18,13 +18,13 @@
         "nls_cp437"
         "nls_iso8859_1"
       ];
-      kernelModules = [ "kvm-intel" "kvm-amd" ];
+      kernelModules = [ "kvm-intel" "kvm-amd" "tp_smapi" "msr" ];
     };
   };
 
   hardware.opengl = {
-      driSupport = true;
-      driSupport32Bit = true;
+    driSupport = true;
+    driSupport32Bit = true;
   };
 
   hardware.enableAllFirmware = true;
