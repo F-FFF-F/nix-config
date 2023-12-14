@@ -18,7 +18,7 @@
         "nls_cp437"
         "nls_iso8859_1"
       ];
-      kernelModules = [ "kvm-intel" "kvm-amd" "tp_smapi" "msr" ];
+      kernelModules = [ "kvm-intel" "kvm-amd" "msr" ];
     };
   };
 
