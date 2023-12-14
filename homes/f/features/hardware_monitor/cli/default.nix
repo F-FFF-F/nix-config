@@ -6,5 +6,6 @@
       libva-utils
       vulkan-tools
       radeontop
+      glxinfo
     ];
 }
