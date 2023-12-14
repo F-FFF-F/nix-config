@@ -10,7 +10,6 @@ in {
 
     extraGroups = [ "wheel" "video" "audio" ] ++ ifTheyExist [
       "minecraft"
-      "network"
       "wireshark"
       "i2c"
       "mysql"
@@ -21,7 +20,6 @@ in {
       "deluge"
       "networkmanager"
       "adbusers"
-      "dialout"
       "lxd"
       "vboxusers"
 
@@ -32,6 +30,8 @@ in {
       "floppy"
       "render"
       "realtime"
+      "dialout"
+      "network"
     ];
 
     initialPassword = "test";
@@ -64,7 +64,7 @@ in {
       "d /persist/home/f/Pictures 0750 f users -"
       "d /persist/home/f/Documents 0750 f users -"
       "d /persist/home/f/Videos 0750 f users -"
-      "d \"/persist/home/f/VirtualBox VMs\" 0750 f users -"
+      ''d "/persist/home/f/VirtualBox VMs" 0750 f users -''
       "d /persist/home/f/VM 0750 f users -"
       "d /persist/home/f/Templates 0750 f users -"
       "d /persist/home/f/Public 0750 f users -"
