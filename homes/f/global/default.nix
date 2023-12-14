@@ -45,7 +45,9 @@
           ".nixops"
           ".local/share/keyrings"
           ".local/share/direnv"
+          ".local/share/tor-browser"
           ".local/bin"
+          ".mozilla"
           "NixConfig"
         ];
         allowOther = true;
