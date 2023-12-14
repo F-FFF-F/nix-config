@@ -9,5 +9,6 @@
     ./features/dns
     ./features/net
     ./features/secrets_management
+    ./features/hardware_monitor
   ];
 }
