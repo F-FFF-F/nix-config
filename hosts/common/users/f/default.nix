@@ -69,15 +69,25 @@ in {
       "d /persist/home/f/Templates 0750 f users -"
       "d /persist/home/f/Public 0750 f users -"
       "d /persist/home/f/Desktop 0750 f users -"
+      "d /persist/home/f/NixConfig 0750 f users -"
+      "d /persist/home/f/.local 0750 f users -"
+      "d /persist/home/f/.config 0750 f users -"
       "d /persist/home/f/.gnupg 0750 f users -"
       "d /persist/home/f/.ssh 0750 f users -"
       "d /persist/home/f/.nixops 0750 f users -"
-      "d /persist/home/f/.local 0750 f users -"
+      "d /persist/home/f/.vscode 0750 f users -"
+      "d /persist/home/f/.vscode-insiders 0750 f users -"
+      "d /persist/home/f/.vscodium 0750 f users -"
+
       "d /persist/home/f/.local/share 0750 f users -"
       "d /persist/home/f/.local/share/keyrings 0750 f users -"
       "d /persist/home/f/.local/share/direnv 0750 f users -"
       "d /persist/home/f/.local/bin 0750 f users -"
-      "d /persist/home/f/NixConfig 0750 f users -"
+
+      "d /persist/home/f/.config 0750 f users -"
+      ''d /persist/home/f/.config/Code 0750 f users -''
+      ''d /persist/home/f/.config/"Code - Insiders" 0750 f users -''
+      ''d /persist/home/f/.config/VSCodium 0750 f users -''
     ];
   };
 }

@@ -40,15 +40,23 @@
           "Templates"
           "Public"
           "Desktop"
+          "NixConfig"
           ".gnupg"
           ".ssh"
           ".nixops"
+          ".mozilla"
+          ".vscode"
+          ".vscode-insiders"
+          ".vscodium"
+
           ".local/share/keyrings"
           ".local/share/direnv"
           ".local/share/tor-browser"
           ".local/bin"
-          ".mozilla"
-          "NixConfig"
+
+          ".config/Code"
+          ''.config/"Code - Insiders"''
+          ".config/VSCodium"
         ];
         allowOther = true;
       };
