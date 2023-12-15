@@ -19,6 +19,8 @@
       enable = true;
       package = pkgs.gitFull;
       lfs = { enable = true; };
+      userName = "F-FFF-F";
+      userEmail = "ffffffffg@skiff.com";
     };
   };
 
