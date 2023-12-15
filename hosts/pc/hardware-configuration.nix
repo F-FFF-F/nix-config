@@ -18,7 +18,7 @@
         "nls_cp437"
         "nls_iso8859_1"
       ];
-      kernelModules = [ "amdgpu" "kvm-intel" "kvm-amd" "msr" ];
+      kernelModules = [ "amdgpu" "kvm-intel" "kvm-amd" "msr" "i2c-dev" ];
     };
   };
 
