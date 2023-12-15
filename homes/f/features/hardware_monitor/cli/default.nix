@@ -9,5 +9,13 @@
     lsof
     lshw
     hw-probe
+    dmidecode
+    edid-decode
+    edid-generator
+    libdisplay-info
+    rwedid
+    read-edid
+    i2c-tools
+    lm_sensors
   ];
 }
