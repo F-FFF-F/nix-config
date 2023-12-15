@@ -26,11 +26,11 @@
 
   # temporary
   services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
   networking.firewall.enable = false;
-  networking.hostName = "test";
+  networking.hostName = "pc";
   networking.hostId = lib.mkDefault "8425e349";
 }
