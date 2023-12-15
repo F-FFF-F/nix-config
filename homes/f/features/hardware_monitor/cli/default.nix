@@ -17,5 +17,6 @@
     read-edid
     i2c-tools
     lm_sensors
+    dippi
   ];
 }
