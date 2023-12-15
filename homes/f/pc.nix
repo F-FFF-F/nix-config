@@ -10,5 +10,6 @@
     ./features/net
     ./features/secrets_management
     ./features/hardware_monitor
+    ./features/vscode
   ];
 }
