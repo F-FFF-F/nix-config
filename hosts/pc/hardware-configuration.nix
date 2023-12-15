@@ -5,6 +5,7 @@
 
     ../common/fstab/zfs.nix
     ../common/fstab/impermanence.nix
+    ../common/fstab/data.nix
   ];
   boot = {
     initrd = {
