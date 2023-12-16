@@ -59,6 +59,7 @@
           ".local/share/qBittorrent"
           ".local/bin"
 
+          ".config/chromium"
           ".config/Code"
           ''.config/"Code - Insiders"''
           ".config/VSCodium"
