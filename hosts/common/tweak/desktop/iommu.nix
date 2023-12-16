@@ -4,7 +4,7 @@
       "intel_iommu=on"
       "amd_iommu=on"
       "iommu=pt"
-      "pcie_acs_override=multifunction"
+      "pcie_acs_override=downstream,multifunction"
     ];
   };
 }
