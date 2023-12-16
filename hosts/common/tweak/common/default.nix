@@ -1,5 +1,8 @@
 { config, ... }: {
   imports = [
+    ./bbr.nix
+    ./console-blank.nix
+    ./nested-virt.nix
     ./file-max.nix
     ./fix-transparent-proxy.nix
     ./max-map-count.nix

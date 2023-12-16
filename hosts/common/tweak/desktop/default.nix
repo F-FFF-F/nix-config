@@ -8,5 +8,8 @@
     ./good-response-time.nix
     ./iomem.nix
     ./iommu.nix
+    ./elevator-none.nix
+    ./pstate.nix
+    ./split-lock.nix
   ];
 }
