@@ -14,7 +14,7 @@
     ../common/optional/all-fs.nix
     ../common/optional/virtualisation
     ../common/optional/ananicy.nix
-    ../common/optional/dns/
+    ../common/optional/dns
     ../common/optional/irqbalance.nix
     ../common/optional/auto-cpufreq.nix
     ../common/optional/thermald.nix
