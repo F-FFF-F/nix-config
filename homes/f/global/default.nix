@@ -54,11 +54,15 @@
           ".local/share/keyrings"
           ".local/share/direnv"
           ".local/share/tor-browser"
+          ".local/share/qBittorrent"
           ".local/bin"
 
           ".config/Code"
           ''.config/"Code - Insiders"''
           ".config/VSCodium"
+          ".config/Bitwarden"
+          ".config/Bitwarden CLI"
+          ".config/qBittorrent"
         ];
         allowOther = true;
       };
