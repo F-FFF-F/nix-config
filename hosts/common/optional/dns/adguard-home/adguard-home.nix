@@ -1,9 +1,42 @@
 { config, pkgs, ... }: {
-  services.adguardhome = {
+  services.adguardhome = let
+    reliable = [
+      "https://dns.cloudflare.com/dns-query"
+      "https://dns.google/dns-query"
+      "sdns://AQMAAAAAAAAADTkuOS45LjExOjg0NDMgZ8hHuMh1jNEgJFVDvnVnRt803x2EwAuMRwNo34Idhj4ZMi5kbnNjcnlwdC1jZXJ0LnF1YWQ5Lm5ldA" # Quad9 DNS
+      "sdns://AQIAAAAAAAAAFlsyYTEwOjUwYzA6OjE6ZmZdOjU0NDMgtehE1rg6Pj4SaOtoH76nDePF-mjb1ogUHb8uwGay2volMi5kbnNjcnlwdC51bmZpbHRlcmVkLm5zMS5hZGd1YXJkLmNvbQ" # AdGuard DNS
+    ];
+    anycast = [
+      "https://dns.alidns.com/dns-query"
+      "sdns://AQcAAAAAAAAAEzM0LjEwMS4xODUuMTMwOjU0NDMghpbY0AAjPtvOiDsSzDh7Few4-cUrb6D33KwcMl75TtkqMi5kbnNjcnlwdC1jZXJ0LnVuZmlsdGVyZWQuZG5zLmJlYmFzaWQuY29t" # BebasDNS
+      "https://dns.cfiec.net/dns-query"
+      "sdns://AQAAAAAAAAAADjIwOC42Ny4yMjAuMjIwILc1EUAgbyJdPivYItf9aR6hwzzI1maNDL4Ev6vKQ_t5GzIuZG5zY3J5cHQtY2VydC5vcGVuZG5zLmNvbQ" # Cisco OpenDNS
+      "sdns://AQMAAAAAAAAAEzE4NS4yMjguMTY4LjEwOjg0NDMgvKwy-tVDaRcfCDLWB1AnwyCM7vDo6Z-UGNx3YGXUjykRY2xlYW5icm93c2luZy5vcmc" # CleanBrowsing
+      "sdns://AQAAAAAAAAAACjguMjAuMjQ3LjIg0sJUqpYcHsoXmZb1X7yAHwg2xyN5q1J-zaiGG-Dgs7AoMi5kbnNjcnlwdC1jZXJ0LnNoaWVsZC0yLmRuc2J5Y29tb2RvLmNvbQ" # Comodo
+      "https://freedns.controld.com/p0"
+      "sdns://AQMAAAAAAAAAEjc4LjQ3LjIxMi4yMTE6OTQ0MyBNRN4TaVynkcwkVAbSBrCvr4X3c3Cygz_4VDUcRhhhYx4yLmRuc2NyeXB0LWNlcnQuRGVDbG91ZFVzLXRlc3Q" # DeCloudUS DNS
+      "https://doh.dns.sb/dns-query"
+      "https://doh.pub/dns-query"
+      # "https://doh.mullvad.net/dns-query" # causes problems
+      "sdns://AQAAAAAAAAAADzE4MC4xMzEuMTQ0LjE0NCDGC-b_38Dj4-ikI477AO1GXcLPfETOFpE36KZIHdOzLhkyLmRuc2NyeXB0LWNlcnQubmF3YWxhLmlk" # Nawala Childprotection DNS
+      "156.154.70.5" # Neustar Recursive DNS
+      "https://anycast.dns.nextdns.io"
+      "https://ada.openbld.net/dns-query"
+      "https://zero.dns0.eu/"
+      "https://basic.rethinkdns.com/"
+      "195.46.39.39" # Safe DNS
+      "sdns://AQMAAAAAAAAADjEwNC4xOTcuMjguMTIxICcgf9USBOg2e0g0AF35_9HTC74qnDNjnm7b-K7ZHUDYIDIuZG5zY3J5cHQtY2VydC5zYWZlc3VyZmVyLmNvLm56" # Safe Surfer
+      "https://doh.360.cn/dns-query"
+      "64.6.64.6" # Verisign Public DNS
+    ];
+    russian = [
+      "https://dns.comss.one/dns-query" # comms.one (Poland and Russia)
+      "https://77.88.8.8:443" # YandexDNS (Russia)
+    ];
+  in {
     enable = true;
     extraArgs = [ "--no-etc-hosts" ];
     mutableSettings = false;
-    allowDHCP = true;
     settings = {
       dns = {
         bind_hosts = [ "127.0.0.1" "::1" ];
@@ -14,28 +47,21 @@
         edns_client_subnet = { enabled = true; };
         fastest_addr = true;
         use_http3_upstreams = true;
-        upstream_dns = [
-          "https://77.88.8.8:443" # YandexDNS
-          "https://dns.comss.one/dns-query"
-        ] ++ [
-          "https://dns.cloudflare.com/dns-query"
-          "https://dns.google/dns-query"
-        ] ++ [
-          "https://dns11.quad9.net/dns-query"
-          "https://doh.libredns.gr/dns-query"
-          "https://doh.sandbox.opendns.com/dns-query"
-          "https://dns.alidns.com/dns-query"
-          "https://dns.bebasid.com/unfiltered"
-          "195.10.195.195" # OpenNIC
-        ];
+        upstream_dns = reliable ++ russian;
         cache_optimistic = true;
         cache_size = 536870912; # 512 MB
         cache_ttl_min = 1800;
         cache_ttl_max = 3600;
         enable_dnssec = true;
         aaaa_disabled = true;
-        upstream_timeout = "2s";
+        upstream_timeout = "25s";
+        fastest_timeout = "15s";
+        user_rules = ''
+          skydns.ru
+          blockpage.skydns.ru
+        '';
         fallback_dns = [
+          "195.10.195.195" # OpenNIC
           "1.1.1.1"
           "8.8.8.8"
           "9.9.9.9"
