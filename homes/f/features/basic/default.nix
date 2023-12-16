@@ -5,16 +5,6 @@
     gnupg
     age
 
-    nil
-    nixd
-    nixel
-    nixci
-    nixdoc
-    nix-ld
-    nix-du
-    nixbang
-    nixfmt
-
     curlFull
     wget
   ];
