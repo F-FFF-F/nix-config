@@ -53,7 +53,7 @@
           listsnapshots = "on";
         };
 
-        mountpoint = "/data";
+        mountpoint = "/";
 
         datasets = {
           reservation = {
@@ -70,8 +70,8 @@
 
           persist = {
             type = "zfs_fs";
-            mountpoint = "/";
-            options = { mountpoint = "/"; };
+            mountpoint = "/data";
+            options = { mountpoint = "/data"; };
           };
         };
       };
