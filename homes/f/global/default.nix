@@ -44,6 +44,7 @@
           "Desktop"
           "NixConfig"
           "Git"
+          "Vault"
           ".gnupg"
           ".ssh"
           ".nixops"
