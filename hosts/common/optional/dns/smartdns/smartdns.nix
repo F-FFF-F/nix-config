@@ -26,8 +26,8 @@
         "180.131.145.145" # Nawala Childprotection DNS
         "156.154.70.5" # Neustar Recursive DNS
         "156.154.71.5" # Neustar Recursive DNS
-        "195.46.39.39" # Safe DNS
-        "195.46.39.40" # Safe DNS
+        # "195.46.39.39" # Safe DNS # Filtering
+        # "195.46.39.40" # Safe DNS # Filtering
         "104.155.237.225" # Safe Surfer
         "104.197.28.121" # Safe Surfer
         "64.6.64.6" # Verisign Public DNS
