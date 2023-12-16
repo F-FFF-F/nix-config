@@ -9,6 +9,7 @@
       "/var/lib/bluetooth"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
+      "/var/lib/waydroid"
       "/etc/NetworkManager/system-connections"
       "/srv"
       {
