@@ -11,6 +11,7 @@
     ./features/secrets_management
     ./features/hardware_monitor
     ./features/vscode
+    ./features/dev
 
     ./features/pc
   ];
