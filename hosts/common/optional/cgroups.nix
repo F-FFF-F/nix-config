@@ -1,6 +1,6 @@
-{ pkgs, ... }: {
+{ lib, pkgs, ... }: {
   systemd = {
-    enableUnifiedCgroupHierarchy = true;
-    enableCgroupAccounting = true;
+    enableUnifiedCgroupHierarchy = lib.mkForce true;
+    enableCgroupAccounting = lib.mkForce true;
   };
 }
