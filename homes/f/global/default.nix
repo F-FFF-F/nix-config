@@ -57,6 +57,8 @@
           ".local/share/direnv"
           ".local/share/tor-browser"
           ".local/share/qBittorrent"
+          ".local/share/Anki2"
+          ".local/share/Anki"
           ".local/bin"
 
           ".config/chromium"
