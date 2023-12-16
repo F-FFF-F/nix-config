@@ -20,6 +20,7 @@
     ../common/optional/thermald.nix
     ../common/optional/time
     ../common/optional/oomd.nix
+    ../common/optional/cgroups.nix
     ../common/optional/faster-shutdown.nix
   ];
 
