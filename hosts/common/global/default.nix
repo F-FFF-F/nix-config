@@ -17,6 +17,8 @@
       input-fonts.acceptLicense = true;
       nvidia.acceptLicense = true;
       oraclejdk.accept_license = true;
+
+      permittedInsecurePackages = [ "electron-25.9.0" ];
     };
   };
 }
