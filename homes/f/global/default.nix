@@ -43,6 +43,7 @@
           "Public"
           "Desktop"
           "NixConfig"
+          "Git"
           ".gnupg"
           ".ssh"
           ".nixops"
