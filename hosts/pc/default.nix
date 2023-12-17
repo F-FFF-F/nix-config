@@ -22,6 +22,7 @@
     ../common/optional/oomd.nix
     ../common/optional/cgroups.nix
     ../common/optional/faster-shutdown.nix
+    ../common/optional/plymouth.nix
   ];
 
   # temporary
