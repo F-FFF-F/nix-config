@@ -1,5 +1,6 @@
 { config, ... }: {
   imports = [
+    ./lxc.nix
     ./bbr.nix
     ./console-blank.nix
     ./nested-virt.nix
