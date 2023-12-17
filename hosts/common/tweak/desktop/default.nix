@@ -1,5 +1,6 @@
 { config, ... }: {
   imports = [
+    ./threadirqs.nix
     ./dirty-bytes.nix
     ./disable-icmp.nix
     ./disable-mitigations.nix
