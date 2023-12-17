@@ -25,8 +25,6 @@
         "net.ipv4.tcp_mtu_probing" = 1;
         "net.ipv4.tcp_syncookies" = 1;
         "net.ipv4.tcp_sack" = 1;
-        "net.core.default_qdisc" = "cake";
-        "net.ipv4.tcp_congestion_control" = "bbr";
       };
     };
   };
