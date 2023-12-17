@@ -22,6 +22,7 @@ in {
       "adbusers"
       "lxd"
       "vboxusers"
+      "uucp"
 
       "cdrom"
       "tape"
@@ -32,6 +33,7 @@ in {
       "realtime"
       "dialout"
       "network"
+      "flashrom"
     ];
 
     initialPassword = "test";
