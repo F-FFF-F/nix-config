@@ -15,5 +15,6 @@
     ./unprivileged-clone.nix
     ./random-no-cpu.conf
     ./protected-symlinks.nix
+    ./forward-ip.nix
   ];
 }
