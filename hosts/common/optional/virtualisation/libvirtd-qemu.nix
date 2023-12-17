@@ -18,10 +18,9 @@
 
   boot.kernelModules = [ "kvm-amd" "kvm-intel" "vfio-pci" ];
 
-  environment.systemPackages = with pkgs; [
-    # Need to add [File (in the menu bar) -> Add connection] when start for the first time
-    virt-manager
+  programs.virt-manager.enable = true;
 
+  environment.systemPackages = with pkgs; [
     # QEMU/KVM, provides:
     #   qemu-storage-daemon qemu-edid qemu-ga
     #   qemu-pr-helper qemu-nbd elf2dmp qemu-img qemu-io
