@@ -10,6 +10,8 @@
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
       "/var/lib/waydroid"
+      "/var/lib/libvirt"
+      "/etc/libvirt"
       "/etc/NetworkManager/system-connections"
       "/srv"
       {
