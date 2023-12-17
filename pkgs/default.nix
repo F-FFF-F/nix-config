@@ -1,3 +1,4 @@
 { pkgs ? import <nixpkgs> { } }: rec {
-    tg-session-keeper = pkgs.callPackage ./tg-session-keeper;
+    tg-session-keeper = pkgs.python3Packages.callPackage ./tg-session-keeper { };
+    telegram-session-keeper = pkgs.callPackage ./telegram-session-keeper.nix
 }
