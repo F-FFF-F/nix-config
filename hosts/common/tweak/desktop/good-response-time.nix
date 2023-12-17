@@ -6,6 +6,9 @@
       sysctl = {
         "vm.watermark_scale_factor" = 125;
         "vm.watermark_boost_factor" = 0;
+
+        # All groups allowed to access hugepages
+        "vm.hugetlb_shm_group" = 0;
       };
     };
   };
