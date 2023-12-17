@@ -13,7 +13,7 @@
     ./quiet.nix
     ./shell-on-fail.nix
     ./unprivileged-clone.nix
-    ./random-no-cpu.conf
+    ./random-nocpu.nix
     ./protected-symlinks.nix
     ./forward-ip.nix
   ];
