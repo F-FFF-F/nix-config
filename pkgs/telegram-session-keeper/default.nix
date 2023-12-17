@@ -7,6 +7,6 @@ pkgs.rustPlatform.buildRustPackage rec {
     owner = "xJonathanLEI";
     repo = "telegram-session-keeper";
     rev = "2c696f5";
-    sha256 = lib.fakeSha256;
+    sha256 = "sha256-Wq4vg4z36KB0VcGLXFjkg/VSLhEsiz/onkqdaJrC7Z8=";
   };
 }
