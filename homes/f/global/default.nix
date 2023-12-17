@@ -59,6 +59,7 @@
           ".local/share/qBittorrent"
           ".local/share/Anki2"
           ".local/share/Anki"
+          ".local/share/tg"
           ".local/bin"
 
           ".config/chromium"
@@ -68,6 +69,7 @@
           ".config/Bitwarden"
           ".config/Bitwarden CLI"
           ".config/qBittorrent"
+          ".config/tg"
         ];
         allowOther = true;
       };
