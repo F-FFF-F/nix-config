@@ -1,5 +1,6 @@
 { config, ... }: {
   imports = [
+    ./pam.nix
     ./lxc.nix
     ./bbr.nix
     ./console-blank.nix
