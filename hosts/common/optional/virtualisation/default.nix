@@ -1,8 +1,7 @@
 { pkgs, ... }: {
   imports = [
-    ./libvirtd.nix
+    ./libvirtd-qemu.nix
     ./lxc.nix
-    ./qemu.nix
     ./docker.nix
     ./lxd.nix
     ./waydroid.nix
