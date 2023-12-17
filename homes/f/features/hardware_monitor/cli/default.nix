@@ -18,5 +18,7 @@
     i2c-tools
     lm_sensors
     dippi
+    pciutils
+    usbutils
   ];
 }
