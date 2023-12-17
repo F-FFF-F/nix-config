@@ -8,11 +8,10 @@ python3Packages.buildPythonPackage rec {
     owner = "DavisDmitry";
     repo = pname;
     rev = "v${version}";
-    sha256 = lib.fakeSha256;
+    sha256 = "sha256-Boy0g8XeVlkEEFuHF4wE321vvSdjJ3Gc6YQVIVMsQ78=";
   };
 
   propagatedBuildInputs = with python3Packages; [
-    python3
     cryptography
     tabulate
     telethon
