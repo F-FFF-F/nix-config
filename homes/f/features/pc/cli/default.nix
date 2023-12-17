@@ -1,5 +1,5 @@
 { pkgs, config, ... }: {
   home.packages = with pkgs; [
-    tg-session-keeper
+    telegram-session-keeper
   ];
 }
