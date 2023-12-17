@@ -2,7 +2,8 @@
 
   boot = {
     initrd = {
-      luks.devices."nixos".device = "/dev/disk/by-partlabel/disk-main-cryptroot";
+      luks.devices."nixos".device =
+        "/dev/disk/by-partlabel/disk-main-cryptroot";
     };
     supportedFilesystems = [ "zfs" ];
     loader = {
@@ -15,6 +16,17 @@
         memtest86.enable = true;
         enableCryptodisk = true;
         useOSProber = true;
+        extraEntries = ''
+          menuentry "Reboot to Setup" {
+            fwsetup
+          }
+          menuentry "Reboot" {
+            reboot
+          }
+          menuentry "Poweroff" {
+            halt
+          }
+        '';
       };
       efi.efiSysMountPoint = "/boot";
       efi.canTouchEfiVariables = true;
