@@ -61,6 +61,7 @@
           xattr = "sa";
           "com.sun:auto-snapshot" = "false";
           canmount = "on";
+          checksum = "blake3";
         };
 
         options = {
@@ -100,9 +101,7 @@
           persist = {
             type = "zfs_fs";
             mountpoint = "/persist";
-            options = {
-              mountpoint = "/persist";
-            };
+            options = { mountpoint = "/persist"; };
           };
         };
       };

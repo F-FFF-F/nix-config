@@ -2,7 +2,10 @@
 
   boot = {
     initrd = {
-      luks.devices."data".device = "/dev/disk/by-partlabel/disk-main-cryptdata";
+      luks.devices."data" = {
+        device = "/dev/disk/by-partlabel/disk-main-cryptdata";
+        allowDiscards = true;
+      };
     };
 
     supportedFilesystems = [ "zfs" ];

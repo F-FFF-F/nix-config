@@ -2,18 +2,31 @@
 
   boot = {
     initrd = {
-      luks.devices."nixos".device =
-        "/dev/disk/by-partlabel/disk-main-cryptroot";
+      luks.devices."nixos" = {
+        device = "/dev/disk/by-partlabel/disk-main-cryptroot";
+        allowDiscards = true;
+      };
     };
+    zfs = { forceImportRoot = false; };
     supportedFilesystems = [ "zfs" ];
     loader = {
       grub = {
+        extraGrubInstallArgs = [
+          "--modules=nativedisk ahci pata part_gpt part_msdos diskfilter mdraid1x lvm ext2"
+        ];
+        gfxpayloadEfi = "keep";
+        gfxpayloadBios = "keep";
+        gfxmodeEfi = "2560x1440";
+        gfxmodeBios = "2560x1440";
         enable = true;
         efiSupport = true;
         device = "nodev";
         copyKernels = true;
         zfsSupport = true;
-        memtest86.enable = true;
+        memtest86 = {
+          enable = true;
+          params = [ "btrace" ];
+        };
         enableCryptodisk = true;
         useOSProber = true;
         extraEntries = ''

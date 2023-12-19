@@ -45,6 +45,7 @@
           xattr = "sa";
           "com.sun:auto-snapshot" = "false";
           canmount = "on";
+          checksum = "blake3";
         };
 
         options = {

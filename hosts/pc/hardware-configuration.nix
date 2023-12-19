@@ -28,6 +28,7 @@
         "netconsole"
         "coretemp"
         "nct6775"
+        "e1000e"
       ];
     };
   };
@@ -55,7 +56,32 @@
 
   hardware.cpu.intel.updateMicrocode = true;
   services.fstrim.enable = true;
-  services.zfs.trim.enable = true;
+  services.zfs = {
+    trim = { enable = true; };
+    autoScrub = {
+      enable = true;
+      interval = "weekly";
+    };
+  };
+
+  boot.zfs = {
+    enableUnstable = true;
+    removeLinuxDRM = true;
+    allowHibernation = true;
+  };
+
+  boot.initrd = {
+    clevis = { enable = true; };
+    verbose = false;
+    network = { enable = true; };
+    services = {
+      bcache.enable = true;
+      lvm.enable = true;
+    };
+    luks = { reusePassphrases = true; };
+  };
+
+  console.earlySetup = true;
 
   hardware.enableAllFirmware = true;
   hardware.enableRedistributableFirmware = true;
