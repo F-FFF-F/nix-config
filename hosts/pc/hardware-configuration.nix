@@ -19,8 +19,16 @@
         "nls_cp437"
         "nls_iso8859_1"
       ];
-      kernelModules =
-        [ "amdgpu" "kvm-intel" "kvm-amd" "msr" "i2c-dev" "netconsole" ];
+      kernelModules = [
+        "amdgpu"
+        "kvm-intel"
+        "kvm-amd"
+        "msr"
+        "i2c-dev"
+        "netconsole"
+        "coretemp"
+        "nct6775"
+      ];
     };
   };
 
